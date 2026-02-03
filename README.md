@@ -1,1 +1,85 @@
-# Gesture-Controlled-Contactless-Switch-using-Camera-technology
+<!-- Header Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=8a2be2&height=95&section=header"/>
+
+<!-- Typing Intro -->
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&pause=900&color=8A2BE2&center=true&vCenter=true&width=780&lines=ECE+Undergraduate;Aspiring+Software+Engineer;IoT+%26+Embedded+Systems+Enthusiast;Learning+by+Building+Real+World+Projects" />
+</div>
+
+---
+
+## ⚡ About Me
+- 👨‍🎓 Prefinal Year **ECE Undergraduate**
+- 💻 Aspiring **Software Engineer**
+- 🧠 Currently learning **Java & Data Structures**
+- 🤖 Interested in **IoT & Embedded Systems**
+- 🔗 Passionate about combining **Electronics + Software**
+- 🌱 Focused on continuous learning and practical implementation
+- 📬 **Email:** `saimiruthul@gmail.com`
+
+---
+
+## 🚧 Currently Working On
+<p align="left">
+  <img src="https://img.shields.io/badge/Java-8A2BE2?style=for-the-badge&logo=openjdk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Data%20Structures-6A5ACD?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Problem%20Solving-7B68EE?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/IoT-9370DB?style=for-the-badge&logo=raspberrypi&logoColor=white"/>
+</p>
+
+---
+
+## 📚 Currently Learning
+<p align="left">
+  <img src="https://img.shields.io/badge/Core%20Java-8A2BE2?style=for-the-badge&logo=java&logoColor=white"/>
+  <img src="https://img.shields.io/badge/DSA-6A5ACD?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/MySQL-4169E1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/OOP%20Concepts-483D8B?style=for-the-badge"/>
+</p>
+
+---
+
+## 🛠 Tools & Technologies
+<p align="left">
+  <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white"/>
+  <img src="https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL%20Workbench-00618A?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white"/>
+</p>
+
+---
+
+## 🧠 Programming Languages
+<p align="left">
+  <img src="https://img.shields.io/badge/Java-8A2BE2?style=for-the-badge&logo=openjdk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+</p>
+
+---
+
+## 🌐 Connect With Me
+<p align="left">
+  <a href="https://www.linkedin.com/in/miruthul-kumar-murali-656271290/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+  <a href="https://github.com/Miruthulkumar" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</p>
+
+---
+
+## 📊 GitHub Activity
+![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=Miruthulkumar&theme=purplish&bg_color=8a2be20D&color=ffffff&line=ffffff&point=ffffff&area=true)
+
+---
+
+### ✨ Quote
+> *“Learn deeply. Build honestly. Grow consistently.”*
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=8a2be2&height=80&section=footer"/>
