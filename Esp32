@@ -1,0 +1,109 @@
+// ESP32_WebSocket_Relays_toggle.ino
+#include <WiFi.h>
+#include <WebSocketsServer.h>
+
+const char* ssid = "vivo V27";
+const char* password = "salman786";
+
+WebSocketsServer webSocket = WebSocketsServer(81); // WS port 81
+
+// Use GPIO 14, 27, 26, 25 on ESP32
+int relayPins[] = {14, 27, 26, 25}; // change if you want other pins
+const int RELAY_COUNT = 4;
+
+// Keep track of logical relay states (true = ON, false = OFF)
+bool relayState[RELAY_COUNT];
+
+void applyRelayState(int i) {
+  // active LOW relays: LOW -> ON, HIGH -> OFF
+  if (relayState[i]) {
+    digitalWrite(relayPins[i], LOW); // ON
+  } else {
+    digitalWrite(relayPins[i], HIGH); // OFF
+  }
+}
+
+void handleMessage(uint8_t num, char * payload) {
+  // payload expected as 4-char string where '1' means "toggle this relay"
+  Serial.print("WS msg from ");
+  Serial.print(num);
+  Serial.print(": ");
+  Serial.println(payload);
+
+  String s = String(payload);
+  if (s.length() >= RELAY_COUNT) {
+    for (int i = 0; i < RELAY_COUNT; ++i) {
+      char c = s.charAt(i);
+      if (c == '1') {
+        // Toggle the relay logical state
+        relayState[i] = !relayState[i];
+        applyRelayState(i);
+        Serial.printf("relay %d -> %s (toggled)\n", i+1, relayState[i] ? "ON" : "OFF");
+      } else {
+        // '0' -> no action for this channel
+      }
+    }
+    // optional: send ack
+    webSocket.sendTXT(num, "ACK");
+  } else {
+    Serial.println("Bad payload length");
+  }
+}
+
+void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length) {
+  switch(type) {
+    case WStype_CONNECTED: {
+        IPAddress ip = webSocket.remoteIP(num);
+        Serial.printf("Client %u connected from %s\n", num, ip.toString().c_str());
+        webSocket.sendTXT(num, "HELLO");
+      }
+      break;
+    case WStype_TEXT: {
+        // Null-terminate payload for safety
+        char msg[128];
+        size_t l = min((size_t)127, length);
+        memcpy(msg, payload, l);
+        msg[l] = 0;
+        handleMessage(num, msg);
+      }
+      break;
+    case WStype_DISCONNECTED:
+      Serial.printf("Client %u disconnected\n", num);
+      break;
+    default:
+      break;
+  }
+}
+
+void setup() {
+  Serial.begin(115200);
+  delay(100);
+
+  // set pins and default OFF (HIGH) and initialize logical state
+  for (int i = 0; i < RELAY_COUNT; ++i) {
+    pinMode(relayPins[i], OUTPUT);
+    relayState[i] = false;            // start OFF
+    digitalWrite(relayPins[i], HIGH); // relays OFF by default (active LOW)
+  }
+
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+  Serial.print("Connecting to WiFi");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(300);
+    Serial.print(".");
+  }
+  Serial.println();
+  Serial.print("IP: ");
+  Serial.println(WiFi.localIP());
+
+  // Start WebSocket server
+  webSocket.begin();
+  webSocket.onEvent(webSocketEvent);
+  Serial.println("WebSocket server started on port 81");
+}
+
+void loop() {
+  webSocket.loop();
+  // you can add periodic tasks here if needed
+}
