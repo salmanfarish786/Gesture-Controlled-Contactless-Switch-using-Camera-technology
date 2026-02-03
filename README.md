@@ -42,8 +42,3 @@ There is a need for a **natural, intuitive, and contactless control system**, wh
 - Appliances are switched **ON/OFF** without physical contact  
 
 ---
-
-## 🧩 System Architecture
-
-**Flow:**
-
